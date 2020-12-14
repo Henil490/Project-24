@@ -19,13 +19,14 @@ function setup() {
 	world = engine.world;
 
 	//Create the Bodies Here.
+	ground=new Dustbin(500,590,1000,10);
 	paper=new Paper(200,100,30);
-	dustbin1=new Dustbin(600,670,200,20);
-	dustbin2=new Dustbin(500,580,20,200);
-	dustbin3=new Dustbin(700,600,20,100);
+	dustbin1=new Dustbin(800,585,200,20);
+	dustbin2=new Dustbin(700,500,10,150);
+	dustbin3=new Dustbin(900,500,10,150);
 
 
-	groundSprite=createSprite(400,680,800,20);
+	
 
 	Engine.run(engine);
   
@@ -39,10 +40,11 @@ function draw() {
   background(0);
   
   drawSprites();
-  paper.display();
-  dustbin1.display();
-  dustbin2.display();
-  dustbin3.display();
+ground.display();
+paper.display();
+dustbin1.display();
+dustbin2.display();
+dustbin3.display();
  
 }
 
